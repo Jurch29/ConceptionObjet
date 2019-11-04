@@ -21,6 +21,6 @@ public class Bibliotheque {
 	}
 
 	public void serialize(Visiteur v) {
-		v.visitBibliotheque(v);
+		v.visitBibliotheque(this);
 	}
 }
