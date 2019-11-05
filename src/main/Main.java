@@ -12,5 +12,6 @@ public class Main {
 		b.addLivre(new Livre("Le fleuve"));
 		XMLAttributeSerializer s = new XMLAttributeSerializer();
 		b.serialize(s);
+		System.out.println("hello from ubo");
 	}
 }
