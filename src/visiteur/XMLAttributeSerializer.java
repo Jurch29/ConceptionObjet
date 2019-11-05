@@ -13,13 +13,13 @@ public class XMLAttributeSerializer extends Visiteur {
 
 	@Override
 	public void visitLivre(Livre l) {
-		// TODO Auto-generated method stub
+		// TODO proper
 		
 	}
 
 	@Override
 	public void visitBibliotheque(Bibliotheque b) {
-		// TODO Auto-generated method stub
+		// TODO proper
 		
 	}
 
