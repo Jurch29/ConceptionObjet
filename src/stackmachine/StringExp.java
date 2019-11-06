@@ -1,21 +1,21 @@
 package stackmachine;
 
-public class IntExp extends UnaryExp {
-
-	private Integer val;
+public class StringExp extends UnaryExp {
 	
-	public IntExp(Integer valeur) {
+	private String val;
+	
+	public StringExp(String valeur) {
 		this.val = valeur;
 	}
 	
-	public Integer getVal() {
+	public String getVal() {
 		return this.val;
 	}
 
 	@Override
 	protected Exp getValue() {
 		// TODO Auto-generated method stub
-		return this; 
+		return this;
 	}
 	
 	// Opération publique
@@ -23,46 +23,46 @@ public class IntExp extends UnaryExp {
 	@Override
 	public Exp add(Exp op) {
 		// TODO Auto-generated method stub
-		return op.addInt(this);
+		return op.addString(this);
 	}
 
 	@Override
 	public Exp sub(Exp op) {
 		// TODO Auto-generated method stub
-		return op.subInt(this);
+		return op.subString(this);
 	}
 
 	@Override
 	public Exp mult(Exp op) {
 		// TODO Auto-generated method stub
-		return op.multInt(this);
+		return op.multString(this);
 	}
 
 	@Override
 	public Exp div(Exp op) {
 		// TODO Auto-generated method stub
-		return op.divInt(this);
+		return op.divString(this);
 	}
-	
+
 	// Opération interne
 	//add
 	
 	@Override
 	public Exp addInt(IntExp exp) {
 		// TODO Auto-generated method stub
-		return new IntExp(this.val + exp.getVal());
+		return super.addInt(exp);
 	}
 
 	@Override
 	public Exp addFloat(FloatExp exp) {
 		// TODO Auto-generated method stub
-		return new FloatExp(this.val + exp.getVal());
+		return super.addFloat(exp);
 	}
 
 	@Override
 	public Exp addString(StringExp exp) {
 		// TODO Auto-generated method stub
-		return super.addString(exp);
+		return new StringExp(this.val + exp.getVal());
 	}
 	
 	//sub
@@ -70,13 +70,13 @@ public class IntExp extends UnaryExp {
 	@Override
 	public Exp subInt(IntExp exp) {
 		// TODO Auto-generated method stub
-		return new IntExp(this.val - exp.getVal());
+		return super.subInt(exp);
 	}
 
 	@Override
 	public Exp subFloat(FloatExp exp) {
 		// TODO Auto-generated method stub
-		return new FloatExp(this.val - exp.getVal());
+		return super.subFloat(exp);
 	}
 
 	@Override
@@ -90,13 +90,13 @@ public class IntExp extends UnaryExp {
 	@Override
 	public Exp multInt(IntExp exp) {
 		// TODO Auto-generated method stub
-		return new IntExp(this.val * exp.getVal());
+		return super.multInt(exp);
 	}
 
 	@Override
 	public Exp multFloat(FloatExp exp) {
 		// TODO Auto-generated method stub
-		return new FloatExp(this.val * exp.getVal());
+		return super.multFloat(exp);
 	}
 
 	@Override
@@ -110,13 +110,13 @@ public class IntExp extends UnaryExp {
 	@Override
 	public Exp divInt(IntExp exp) {
 		// TODO Auto-generated method stub
-		return new IntExp(this.val / exp.getVal());
+		return super.divInt(exp);
 	}
 
 	@Override
 	public Exp divFloat(FloatExp exp) {
 		// TODO Auto-generated method stub
-		return new FloatExp(this.val / exp.getVal());
+		return super.divFloat(exp);
 	}
 
 	@Override
@@ -124,4 +124,5 @@ public class IntExp extends UnaryExp {
 		// TODO Auto-generated method stub
 		return super.divString(exp);
 	}
+	
 }

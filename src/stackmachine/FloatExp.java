@@ -1,21 +1,21 @@
 package stackmachine;
 
-public class IntExp extends UnaryExp {
+public class FloatExp extends UnaryExp {
 
-	private Integer val;
+	private Float val;
 	
-	public IntExp(Integer valeur) {
+	public FloatExp(Float valeur) {
 		this.val = valeur;
 	}
 	
-	public Integer getVal() {
+	public Float getVal() {
 		return this.val;
 	}
 
 	@Override
 	protected Exp getValue() {
 		// TODO Auto-generated method stub
-		return this; 
+		return this;
 	}
 	
 	// Opération publique
@@ -23,34 +23,34 @@ public class IntExp extends UnaryExp {
 	@Override
 	public Exp add(Exp op) {
 		// TODO Auto-generated method stub
-		return op.addInt(this);
+		return op.addFloat(this);
 	}
 
 	@Override
 	public Exp sub(Exp op) {
 		// TODO Auto-generated method stub
-		return op.subInt(this);
+		return op.subFloat(this);
 	}
 
 	@Override
 	public Exp mult(Exp op) {
 		// TODO Auto-generated method stub
-		return op.multInt(this);
+		return op.multFloat(this);
 	}
 
 	@Override
 	public Exp div(Exp op) {
 		// TODO Auto-generated method stub
-		return op.divInt(this);
+		return op.divFloat(this);
 	}
 	
 	// Opération interne
 	//add
-	
+		
 	@Override
 	public Exp addInt(IntExp exp) {
 		// TODO Auto-generated method stub
-		return new IntExp(this.val + exp.getVal());
+		return new FloatExp(this.val + exp.getVal());
 	}
 
 	@Override
@@ -70,7 +70,7 @@ public class IntExp extends UnaryExp {
 	@Override
 	public Exp subInt(IntExp exp) {
 		// TODO Auto-generated method stub
-		return new IntExp(this.val - exp.getVal());
+		return new FloatExp(this.val - exp.getVal());
 	}
 
 	@Override
@@ -90,7 +90,7 @@ public class IntExp extends UnaryExp {
 	@Override
 	public Exp multInt(IntExp exp) {
 		// TODO Auto-generated method stub
-		return new IntExp(this.val * exp.getVal());
+		return new FloatExp(this.val * exp.getVal());
 	}
 
 	@Override
@@ -110,7 +110,7 @@ public class IntExp extends UnaryExp {
 	@Override
 	public Exp divInt(IntExp exp) {
 		// TODO Auto-generated method stub
-		return new IntExp(this.val / exp.getVal());
+		return new FloatExp(this.val / exp.getVal());
 	}
 
 	@Override

@@ -1,11 +1,11 @@
 package stackmachine;
 
-public class AddExp extends BinExp {
+public class DivExp extends BinExp {
 
 	private Exp exp1;
 	private Exp exp2;
 	
-	public AddExp(Exp exp1, Exp exp2) {
+	public DivExp(Exp exp1, Exp exp2) {
 		this.exp1 = exp1;
 		this.exp2 = exp2;
 	}
@@ -13,6 +13,6 @@ public class AddExp extends BinExp {
 	@Override
 	public Exp getValue() {
 		// TODO Auto-generated method stub
-		return exp1.add(exp2);
+		return exp1.div(exp2);
 	}
 }
