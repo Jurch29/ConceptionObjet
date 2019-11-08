@@ -2,7 +2,7 @@ package model;
 
 import java.util.ArrayList;
 
-import visiteur.Visiteur;
+import visiteur.VisiteurSerialize;
 
 public class Bibliotheque {
 	
@@ -20,7 +20,7 @@ public class Bibliotheque {
 		this.livres.add(l);
 	}
 
-	public void serialize(Visiteur v) {
+	public void serialize(VisiteurSerialize v) {
 		v.visitBibliotheque(this);
 	}
 }

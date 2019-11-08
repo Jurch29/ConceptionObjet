@@ -6,7 +6,9 @@ import org.junit.jupiter.api.Test;
 
 import stackmachine.AddExp;
 import stackmachine.Exp;
+import stackmachine.FloatExp;
 import stackmachine.IntExp;
+import stackmachine.MultExp;
 import stackmachine.SubExp;
 
 class Stackmachine {
@@ -29,10 +31,28 @@ class Stackmachine {
 		IntExp ie1 = new IntExp(3);
 		IntExp ie2 = new IntExp(2);
 		
-		SubExp ad1 = new SubExp(ie1,ie2);
+		SubExp ad1 = new SubExp(ie2,ie1);
 		IntExp ie3 = (IntExp) ad1.getValue();
 		
 		assert(ie3.getVal() == i1.intValue());
 	}
 
+	@Test 
+	void interpreteurAddExp() {
+		IntExp ie1 = new IntExp(new Integer(10));
+		IntExp ie2 = new IntExp(new Integer(20));
+		
+		AddExp ad1 = new AddExp(ie1,ie2);
+		IntExp ie3 = (IntExp) ad1.getValue();
+		assert(ie3.getVal() == 30);
+	}
+	
+	@Test
+	void interpreteurMultIntAndFloat() {
+		IntExp ie1 = new IntExp(new Integer(10));
+		FloatExp fe1 = new FloatExp(new Float(5.8));
+		MultExp ml1 = new MultExp(ie1,fe1);
+		FloatExp fe2 = (FloatExp) ml1.getValue();
+		assert(fe2.getVal() == 58.0);
+	}
 }

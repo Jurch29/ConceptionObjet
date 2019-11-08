@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class Visiteur {
+class VisiteurSerializeur {
 
 	@Test
 	void test() {

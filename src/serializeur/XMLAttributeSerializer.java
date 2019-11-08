@@ -1,9 +1,10 @@
-package visiteur;
+package serializeur;
 
 import model.Bibliotheque;
 import model.Livre;
+import visiteur.VisiteurSerialize;
 
-public class XMLAttributeSerializer extends Visiteur {
+public class XMLAttributeSerializer extends VisiteurSerialize {
 
 	String result;
 	

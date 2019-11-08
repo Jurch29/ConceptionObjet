@@ -1,6 +1,6 @@
 package model;
 
-import visiteur.Visiteur;
+import visiteur.VisiteurSerialize;
 
 public class Livre {
 	
@@ -11,7 +11,7 @@ public class Livre {
 		this.titre = title;
 	}
 	
-	public void serialize(Visiteur v) {
+	public void serialize(VisiteurSerialize v) {
 		v.visitLivre(this);
 	}
 }
