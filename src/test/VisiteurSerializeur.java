@@ -13,7 +13,7 @@ class VisiteurSerializeur {
 		XMLAttributeSerializer v = new XMLAttributeSerializer();
 		Livre l = new Livre("Le livre");
 		l.setAuteur("Louis 2");
-		v.visitLivre(l);
+		l.serialize(v);
 		System.out.println(v.getResult());
 	}
 	
@@ -28,7 +28,7 @@ class VisiteurSerializeur {
 		Bibliotheque b = new Bibliotheque();
 		b.addLivre(l);
 		b.addLivre(l1);
-		v.visitBibliotheque(b);
+		b.serialize(v);
 		System.out.println(v.getResult());
 	}
 }
