@@ -14,7 +14,7 @@ class VisiteurSerializeur {
 		Livre l = new Livre("Le livre");
 		l.setAuteur("Louis 2");
 		l.serialize(v);
-		System.out.println(v.getResult());
+		System.out.println(v.getoutput());
 	}
 	
 	@Test
@@ -29,6 +29,6 @@ class VisiteurSerializeur {
 		b.addLivre(l);
 		b.addLivre(l1);
 		b.serialize(v);
-		System.out.println(v.getResult());
+		System.out.println(v.getoutput());
 	}
 }

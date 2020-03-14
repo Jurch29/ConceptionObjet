@@ -51,7 +51,7 @@ public class Calculator extends VisiteurCalculator {
 	}
 
 	@Override
-	public UnaryExp result() {
+	public UnaryExp output() {
 		// TODO Auto-generated method stub
 		return s.pop();
 	}

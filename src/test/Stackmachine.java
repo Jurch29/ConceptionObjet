@@ -69,7 +69,7 @@ class Stackmachine {
 		c.sub();
 		c.add();
 		c.add();
-		IntExp result = (IntExp) c.result();
-		assert(result.getVal()==20);
+		IntExp output = (IntExp) c.output();
+		assert(output.getVal()==20);
 	}
 }

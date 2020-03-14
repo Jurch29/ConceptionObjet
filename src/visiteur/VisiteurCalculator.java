@@ -9,6 +9,6 @@ public abstract class VisiteurCalculator {
 	public abstract void sub();
 	public abstract void mult();
 	public abstract void div();
-	public abstract UnaryExp result(); 
+	public abstract UnaryExp output(); 
 	
 }
